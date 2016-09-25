@@ -56,3 +56,4 @@ plot(M)
 print(M, 'chart', file="C:/Socrates-blog/assets/html/bikesharing.html")
 
 # Open the saved file in Notepad, copy the content and paste it in your blog page (or in .MD file)
+# Thats it. If you refresh the blog page, you should be able to see the motion chart embedded on the page.
