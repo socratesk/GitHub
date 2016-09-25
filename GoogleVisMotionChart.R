@@ -8,6 +8,7 @@ setwd("C:/home/kaggle/BikeSharing")
 
 # Install necessary packages
 library(sqldf)
+library(reshape2)
 library(googleVis)
 
 #Load dataset
@@ -47,7 +48,7 @@ fullDF <- fullDF[, c("type", "date", "user_type", "period", "counts",  "user_cou
 fullDF$period <- as.numeric(strptime(fullDF$period, "%Y-%m-%d"))
 
 # Create GoogleVis Motion Chart
-M <- gvisMotionChart(fullDF, "type", "date", options = list(state=myStateSettings, width = 800, height = 600))
+M <- gvisMotionChart(fullDF, "type", "date", options = list(width = 800, height = 600))
 
 #Plot motion Chart on the browser. The chart will open in default browser window.
 plot(M)
